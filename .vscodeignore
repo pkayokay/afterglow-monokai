@@ -1,0 +1,11 @@
+.git/**
+.github/**
+.gitignore
+**/*.vsix
+scripts/**
+.vscode/**
+*.md
+!README.md
+!CHANGELOG.md
+.DS_Store
+node_modules/**
