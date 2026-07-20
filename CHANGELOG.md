@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.2
+
+- File search / quick-open match highlights and find matches use blue instead of yellow
+
 ## 1.0.1
 
 - Primary buttons, badges, and progress bar use VS Code–style blue instead of yellow/gold

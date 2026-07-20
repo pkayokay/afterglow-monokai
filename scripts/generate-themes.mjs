@@ -34,11 +34,12 @@ function workbenchClassic(g) {
   const bright = "#E8E8E8";
   const border = "#121212";
   const widget = "#303030";
-  // Subtle gold accent for borders / highlights (not primary buttons)
+  // Subtle gold only where we still want a warm accent (rare)
   const accent = "#E5B567";
-  // VS Code–style blue for buttons / badges (avoids loud yellow CTAs)
+  // VS Code–style blue for buttons, badges, search matches, list highlights
   const buttonBg = "#0E639C";
   const buttonHover = "#1177BB";
+  const highlightBlue = "#3794FF";
   // Soft selection companions derived from scheme selection when 8-digit, else slate
   const selSoft = selection.length === 9 ? selection.slice(0, 7) + "22" : "#5A647E55";
   const selWash = selection.length === 9 ? selection.slice(0, 7) + "18" : "#5A647E33";
@@ -54,9 +55,9 @@ function workbenchClassic(g) {
     "editor.selectionHighlightBackground": selWash,
     "editor.wordHighlightBackground": "#FFFFFF12",
     "editor.wordHighlightStrongBackground": "#FFFFFF18",
-    "editor.findMatchBackground": (g.findHighlight || "#FFE792") + "66",
-    "editor.findMatchHighlightBackground": (g.findHighlight || "#FFE792") + "33",
-    "editor.findRangeHighlightBackground": selWash,
+    "editor.findMatchBackground": "#0E639C99",
+    "editor.findMatchHighlightBackground": "#0E639C55",
+    "editor.findRangeHighlightBackground": "#0E639C33",
     "editor.lineHighlightBackground": lineHighlight,
     "editor.lineHighlightBorder": "#00000000",
     "editor.rangeHighlightBackground": "#FFFFFF0A",
@@ -145,7 +146,8 @@ function workbenchClassic(g) {
     "list.focusBackground": selected,
     "list.focusForeground": bright,
     "list.focusOutline": "#00000000",
-    "list.highlightForeground": accent,
+    "list.highlightForeground": highlightBlue,
+    "list.focusHighlightForeground": highlightBlue,
     "list.dropBackground": "#FFFFFF15",
     "list.errorForeground": "#c45330",
     "list.warningForeground": "#e5b567",
@@ -250,7 +252,8 @@ function workbenchClassic(g) {
     "editorSuggestWidget.background": widget,
     "editorSuggestWidget.border": "#3A3A3A",
     "editorSuggestWidget.foreground": soft,
-    "editorSuggestWidget.highlightForeground": accent,
+    "editorSuggestWidget.highlightForeground": highlightBlue,
+    "editorSuggestWidget.focusHighlightForeground": highlightBlue,
     "editorSuggestWidget.selectedBackground": selected,
     "editorSuggestWidget.selectedForeground": bright,
     "editorHoverWidget.background": widget,
@@ -273,8 +276,9 @@ function workbenchClassic(g) {
     "quickInput.foreground": fg,
     "quickInputList.focusBackground": selected,
     "quickInputList.focusForeground": bright,
+    "quickInputList.focusIconForeground": highlightBlue,
     "pickerGroup.border": "#3A3A3A",
-    "pickerGroup.foreground": accent,
+    "pickerGroup.foreground": highlightBlue,
     "commandCenter.background": input,
     "commandCenter.foreground": soft,
     "commandCenter.border": "#3A3A3A",
@@ -339,7 +343,10 @@ function workbenchClassic(g) {
     "settings.modifiedItemIndicator": accent,
     "settings.focusedRowBackground": hover,
     "minimap.selectionHighlight": selection,
-    "minimap.findMatchHighlight": "#FFE79288",
+    "minimap.findMatchHighlight": "#0E639C88",
+    "searchEditor.findMatchBackground": "#0E639C66",
+    "searchEditor.findMatchBorder": highlightBlue,
+    "search.resultsInfoForeground": soft,
     "minimap.errorHighlight": "#CF6A4C",
     "minimap.warningHighlight": "#e5b567",
     "minimapGutter.addedBackground": "#8F9D6A",
