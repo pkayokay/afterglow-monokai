@@ -123,7 +123,7 @@ function workbenchClassic(g) {
     "activityBar.activeBorder": accent,
     "activityBar.activeBackground": "#00000000",
     "activityBarBadge.background": buttonBg,
-    "activityBarBadge.foreground": "#1E1E1E",
+    "activityBarBadge.foreground": "#FFFFFF",
     "activityBarTop.foreground": soft,
     "activityBarTop.activeBorder": accent,
     "activityBarTop.inactiveForeground": muted,
