@@ -34,8 +34,11 @@ function workbenchClassic(g) {
   const bright = "#E8E8E8";
   const border = "#121212";
   const widget = "#303030";
-  // Subtle accent for focus only (not full status bar)
+  // Subtle gold accent for borders / highlights (not primary buttons)
   const accent = "#E5B567";
+  // VS Code–style blue for buttons / badges (avoids loud yellow CTAs)
+  const buttonBg = "#0E639C";
+  const buttonHover = "#1177BB";
   // Soft selection companions derived from scheme selection when 8-digit, else slate
   const selSoft = selection.length === 9 ? selection.slice(0, 7) + "22" : "#5A647E55";
   const selWash = selection.length === 9 ? selection.slice(0, 7) + "18" : "#5A647E33";
@@ -119,7 +122,7 @@ function workbenchClassic(g) {
     "activityBar.border": border,
     "activityBar.activeBorder": accent,
     "activityBar.activeBackground": "#00000000",
-    "activityBarBadge.background": accent,
+    "activityBarBadge.background": buttonBg,
     "activityBarBadge.foreground": "#1E1E1E",
     "activityBarTop.foreground": soft,
     "activityBarTop.activeBorder": accent,
@@ -207,17 +210,17 @@ function workbenchClassic(g) {
     "dropdown.foreground": fg,
     "dropdown.border": "#3A3A3A",
     "dropdown.listBackground": widget,
-    "button.background": accent,
-    "button.foreground": "#1E1E1E",
-    "button.hoverBackground": "#F0C57A",
+    "button.background": buttonBg,
+    "button.foreground": "#FFFFFF",
+    "button.hoverBackground": buttonHover,
     "button.secondaryBackground": selected,
     "button.secondaryForeground": bright,
     "checkbox.background": input,
-    "checkbox.foreground": accent,
+    "checkbox.foreground": buttonBg,
     "checkbox.border": "#3A3A3A",
-    "badge.background": accent,
-    "badge.foreground": "#1E1E1E",
-    "progressBar.background": accent,
+    "badge.background": buttonBg,
+    "badge.foreground": "#FFFFFF",
+    "progressBar.background": buttonBg,
 
     "inlineChat.background": widget,
     "inlineChat.foreground": fg,

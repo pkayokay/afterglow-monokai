@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1
+
+- Primary buttons, badges, and progress bar use VS Code–style blue instead of yellow/gold
+
 ## 1.0.0
 
 - Initial public release of **Afterglow Monokai** for Cursor (Open VSX)

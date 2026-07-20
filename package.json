@@ -2,7 +2,7 @@
   "name": "afterglow-theme",
   "displayName": "Afterglow Monokai",
   "description": "Afterglow Monokai dark theme for Cursor and VS Code — inspired by the classic Sublime Text Afterglow package.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "pkayokay",
   "license": "MIT",
   "engines": {
